@@ -20,3 +20,10 @@ class SignUpModel(BaseModel):
                 "is_active": True
             }
         }
+
+class Settings(BaseModel):
+    authjwt_secret_key:str = 'b6fe6044a54485dbd25b39ab44b9973b936cc7239075890121cca647c3b6f22d'
+
+class LoginModel(BaseModel):
+    username: str
+    password: str
