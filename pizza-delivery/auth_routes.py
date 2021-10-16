@@ -90,7 +90,7 @@ async def refresh_token(Authorize:AuthJWT=Depends()):
             detail="Please provide a valid refresh token"
         )
     
-    current_user = Authorize.get_jwt_identity()
+    current_user = Authorize.get_jwt_subject()
 
     access_token = Authorize.create_access_token(subject=current_user)
 
