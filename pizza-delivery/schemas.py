@@ -50,5 +50,7 @@ class OrderStatusModel(BaseModel):
     class Config:
         orm_mode = True
         schema_extra = {
+            "example": {
             "order_status": "PENDING"
+            }
         }
